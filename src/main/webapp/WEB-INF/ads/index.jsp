@@ -10,10 +10,12 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
+    <hr>
     <h1>AD LIST</h1>
+    <hr>
     <br><br>
     <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6 ad_div">
+        <div class="col-md-12 ad_div">
             <form role="search" action="/ad_individ" method="get">
                 <button class="adsBtn" name="id" value=${ad.getId()}>
                     <h2>${ad.title}</h2>

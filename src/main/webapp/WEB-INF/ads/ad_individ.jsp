@@ -18,7 +18,7 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
-    <div class="col-md-6 ad_div">
+    <div class="col-md-12 ad_div">
         <c:forEach var="ad" items="${ads}">
             <h2 id="large_headline">${ad.title}</h2>
             <h4>${ad.timestamp}</h4>
@@ -26,6 +26,17 @@
             <h4 id="middle_headline">${ad.getUsername()}</h4>
         </c:forEach>
     </div>
+    <c:choose>
+        <c:when test="${sessionScope.user != null}">
+            <a href="/ads/create" class="btn btn-lg btn-default">UPDATE</a>
+            <a href="/register" class="btn btn-lg btn-default">SAVE</a>
+            <a href="/register" class="btn btn-lg btn-default">REMOVE</a>
+        </c:when>
+        <c:otherwise>
+            <a href="/register" class="btn btn-lg btn-default">RESPOND</a>
+            <a href="/register" class="btn btn-lg btn-default">SAVE</a>
+        </c:otherwise>
+    </c:choose>
     <footer class="footer navbar-fixed-bottom navbar navbar-default">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->

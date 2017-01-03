@@ -9,26 +9,29 @@
 <body>
     <jsp:include page="partials/navbar.jsp" />
     <div class="container">
+        <hr>
         <h1>Please fill in your information.</h1>
+        <hr>
         <c:if test="${sessionScope.errorMessage != null}">
             <div class="has-error alert alert-danger" role="alert">${sessionScope.errorMessage}</div>
         </c:if>
         <form action="/register" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
-                <input id="username" name="username" class="form-control" type="text">
+                <input id="username" name="username" class="form-control register_field" type="text">
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input id="email" name="email" class="form-control" type="text">
+                <input id="email" name="email" class="form-control register_field" type="text">
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input id="password" name="password" class="form-control" type="password">
+                <p><em>Must be at least six characters in length</em></p>
+                <input id="password" name="password" class="form-control register_field" type="password">
             </div>
             <div class="form-group">
                 <label for="confirm_password">Confirm Password</label>
-                <input id="confirm_password" name="confirm_password" class="form-control" type="password">
+                <input id="confirm_password" name="confirm_password" class="form-control register_field" type="password">
             </div>
             <input type="submit" class="btn btn-primary btn-block">
         </form>
