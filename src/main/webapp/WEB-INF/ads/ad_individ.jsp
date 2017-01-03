@@ -18,25 +18,36 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
-    <div class="col-md-12 ad_div">
+    <div class="col-md-12">
         <c:forEach var="ad" items="${ads}">
+            <div class="ad_div">
             <h2 id="large_headline">${ad.title}</h2>
             <h4>${ad.timestamp}</h4>
             <p id="cust_paragraph_text">${ad.description}</p>
             <h4 id="middle_headline">${ad.getUsername()}</h4>
+            </div>
+            <c:choose>
+                <c:when test="${sessionScope.user != null}">
+                    <form action="/ad_individ/ad/update" method="get">
+                        <button class="btn btn-lg btn-default" name="id" value=${ad.getId()}>
+                            UPDATE
+                        </button>
+                    </form>
+                    <a href="/register" class="btn btn-lg btn-default">SAVE</a>
+                    <form action="/ad_individ/ad/remove" method="get">
+                        <button class="btn btn-lg btn-default" name="id" value=${ad.getId()}>
+                            REMOVE
+                        </button>
+                    </form>
+                </c:when>
+                <c:otherwise>
+                    <a href="/register" class="btn btn-lg btn-default">RESPOND</a>
+                    <a href="/register" class="btn btn-lg btn-default">SAVE</a>
+                </c:otherwise>
+            </c:choose>
         </c:forEach>
     </div>
-    <c:choose>
-        <c:when test="${sessionScope.user != null}">
-            <a href="/ads/create" class="btn btn-lg btn-default">UPDATE</a>
-            <a href="/register" class="btn btn-lg btn-default">SAVE</a>
-            <a href="/register" class="btn btn-lg btn-default">REMOVE</a>
-        </c:when>
-        <c:otherwise>
-            <a href="/register" class="btn btn-lg btn-default">RESPOND</a>
-            <a href="/register" class="btn btn-lg btn-default">SAVE</a>
-        </c:otherwise>
-    </c:choose>
+
     <footer class="footer navbar-fixed-bottom navbar navbar-default">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
