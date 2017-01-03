@@ -7,6 +7,7 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+    <jsp:include page="/WEB-INF/partials/footer.jsp" />
     <div class="container">
         <hr>
         <h1>Please Log In</h1>
@@ -14,25 +15,14 @@
         <form action="/login" method="POST">
             <div class="form-group">
                 <label for="username">Username</label>
-                <input id="username" name="username" class="form-control" type="text">
+                <input id="username" name="username" class="form-control register_field" type="text">
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input id="password" name="password" class="form-control" type="password">
+                <input id="password" name="password" class="form-control register_field" type="password">
             </div>
             <input type="submit" class="btn btn-primary btn-block" value="Log In">
         </form>
     </div>
-    <footer class="footer navbar-fixed-bottom navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header navbar-inverted">
-                <a class="navbar-brand welcome_title" href="/index">@ Copyright 2016</a>
-                <a class="navbar-right navbar-brand welcome_title">BKJ Productions</a>
-
-            </div>
-        </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </footer>
 </body>
 </html>

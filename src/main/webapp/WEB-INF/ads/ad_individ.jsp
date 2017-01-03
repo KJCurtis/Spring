@@ -16,7 +16,7 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-
+<jsp:include page="/WEB-INF/partials/footer.jsp" />
 <div class="container">
     <div class="col-md-12 ad_div">
         <c:forEach var="ad" items="${ads}">
@@ -37,15 +37,6 @@
             <a href="/register" class="btn btn-lg btn-default">SAVE</a>
         </c:otherwise>
     </c:choose>
-    <footer class="footer navbar-fixed-bottom navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header navbar-inverted">
-                <a class="navbar-brand welcome_title" href="/index">@ Copyright 2016</a>
-                <a class="navbar-right navbar-brand welcome_title">BKJ Productions</a>
-            </div>
-        </div><!-- /.navbar-collapse -->
-    </footer>
 </div><!-- /.container-fluid -->
 </body>
 </html>

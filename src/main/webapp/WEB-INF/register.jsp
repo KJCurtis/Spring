@@ -8,9 +8,11 @@
 </head>
 <body>
     <jsp:include page="partials/navbar.jsp" />
+    <jsp:include page="partials/footer.jsp" />
     <div class="container">
         <hr>
-        <h1>Please fill in your information.</h1>
+        <h1>Create an account</h1>
+        <p><em>Please fill in your information</em></p>
         <hr>
         <c:if test="${sessionScope.errorMessage != null}">
             <div class="has-error alert alert-danger" role="alert">${sessionScope.errorMessage}</div>
@@ -36,15 +38,5 @@
             <input type="submit" class="btn btn-primary btn-block">
         </form>
     </div>
-    <footer class="footer navbar-fixed-bottom navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header navbar-inverted">
-                <a class="navbar-brand welcome_title" href="/index">@ Copyright 2016</a>
-                <a class="navbar-right navbar-brand welcome_title">BKJ Productions</a>
-            </div>
-        </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </footer>
 </body>
 </html>
