@@ -19,3 +19,4 @@ public class adIndividUpdateServlet extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF/ads/adUpdate.jsp").forward(request, response);
     }
 }
+
