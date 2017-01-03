@@ -22,13 +22,17 @@
     <hr>
 <form action="/ads/create" method="post">
     <c:forEach var="ad" items="${ads}">
+        <h2>${ad.title}</h2>
+        <h4>${ad.timestamp}</h4>
+        <p>${ad.description}</p>
+        <h4>${ad.getUsername()}</h4>
     <div class="form-group">
             <label for="title">Title</label>
-            <input id="title" name="title" class="form-control" type="text" value="${ad.title}">
+            <input id="title" name="title" class="form-control" type="text">
         </div>
         <div class="form-group">
             <label for="description">Description</label>
-            <textarea id="description" name="description" class="form-control" type="text" value="${ad.description}" ></textarea>
+            <textarea id="description" name="description" class="form-control"></textarea>
         </div>
         <input type="submit" class="btn btn-block btn-primary">
     </c:forEach>
