@@ -1,7 +1,5 @@
 package com.codeup.adlister.controllers;
 
-import com.codeup.adlister.dao.DaoFactory;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,8 +15,7 @@ public class adIndividUpdateServlet extends HttpServlet {
             HttpServletRequest request,
             HttpServletResponse response
     ) throws ServletException, IOException {
-        String q = request.getParameter("q");
-        request.setAttribute("ads", DaoFactory.getAdsDao().all(q));
-        request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
+
+        request.getRequestDispatcher("/WEB-INF/ads/adUpdate.jsp").forward(request, response);
     }
 }
