@@ -9,7 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
-    <title>ALSTR Footer</title>
+    <title>ADLSTR Footer</title>
 </head>
 <body>
 <footer class="footer navbar-fixed-bottom navbar navbar-default">
