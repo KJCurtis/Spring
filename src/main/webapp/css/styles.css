@@ -29,6 +29,14 @@ textarea{
     top: 50%;
     transform: translateY(50%);
 }
+#submit_length_mod_reg{
+    width: 40%;
+    margin: auto;
+}
+#submit_length_mod_in{
+    width: 40%;
+    margin: auto;
+}
 #sign_up{
     color: #5bc0de;
 }

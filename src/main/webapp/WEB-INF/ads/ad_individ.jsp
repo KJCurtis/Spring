@@ -47,30 +47,6 @@
             </c:choose>
         </c:forEach>
     </div>
-
-
-    <footer class="footer navbar-fixed-bottom navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header navbar-inverted">
-                <a class="navbar-brand welcome_title" href="/index">@ Copyright 2016</a>
-                <a class="navbar-right navbar-brand welcome_title">BKJ Productions</a>
-            </div>
-        </div><!-- /.navbar-collapse -->
-    </footer>
-
-    <c:choose>
-        <c:when test="${sessionScope.user != null}">
-            <a href="/ads/create" class="btn btn-lg btn-default">UPDATE</a>
-            <a href="/register" class="btn btn-lg btn-default">SAVE</a>
-            <a href="/register" class="btn btn-lg btn-default">REMOVE</a>
-        </c:when>
-        <c:otherwise>
-            <a href="/register" class="btn btn-lg btn-default">RESPOND</a>
-            <a href="/register" class="btn btn-lg btn-default">SAVE</a>
-        </c:otherwise>
-    </c:choose>
-
 </div><!-- /.container-fluid -->
 </body>
 </html>
