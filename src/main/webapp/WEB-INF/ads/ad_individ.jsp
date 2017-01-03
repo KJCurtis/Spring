@@ -16,7 +16,7 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-
+<jsp:include page="/WEB-INF/partials/footer.jsp" />
 <div class="container">
     <div class="col-md-12">
         <c:forEach var="ad" items="${ads}">
@@ -48,6 +48,7 @@
         </c:forEach>
     </div>
 
+
     <footer class="footer navbar-fixed-bottom navbar navbar-default">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -57,6 +58,19 @@
             </div>
         </div><!-- /.navbar-collapse -->
     </footer>
+
+    <c:choose>
+        <c:when test="${sessionScope.user != null}">
+            <a href="/ads/create" class="btn btn-lg btn-default">UPDATE</a>
+            <a href="/register" class="btn btn-lg btn-default">SAVE</a>
+            <a href="/register" class="btn btn-lg btn-default">REMOVE</a>
+        </c:when>
+        <c:otherwise>
+            <a href="/register" class="btn btn-lg btn-default">RESPOND</a>
+            <a href="/register" class="btn btn-lg btn-default">SAVE</a>
+        </c:otherwise>
+    </c:choose>
+
 </div><!-- /.container-fluid -->
 </body>
 </html>

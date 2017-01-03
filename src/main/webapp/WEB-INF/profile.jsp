@@ -8,7 +8,7 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-
+    <jsp:include page="/WEB-INF/partials/footer.jsp" />
     <div class="container">
         <hr>
         <h1>Welcome, ${sessionScope.user.username}!</h1>
@@ -75,15 +75,5 @@
             </div>
         </div>
         </div>
-    <footer class="footer navbar navbar-fixed-bottom navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header navbar-inverted">
-                <a class="navbar-brand welcome_title" href="/index">@ Copyright 2016</a>
-                <a class="navbar-right navbar-brand welcome_title">BKJ Productions</a>
-            </div>
-        </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </footer>
 </body>
 </html>
