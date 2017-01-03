@@ -10,6 +10,8 @@ public interface Ads {
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
 
+    Long update(Ad ad, String adId);
+
     List <Ad> userAd(long userId);
 
     List <Ad> specAd(String adId);

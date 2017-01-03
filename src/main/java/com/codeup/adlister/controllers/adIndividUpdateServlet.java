@@ -20,19 +20,21 @@ public class adIndividUpdateServlet extends HttpServlet {
             response.sendRedirect("/login");
             return;
         }
+        String adId = request.getParameter("id");
+        request.setAttribute("ads", DaoFactory.getAdsDao().specAd(adId));
         request.getRequestDispatcher("/WEB-INF/ads/adUpdate.jsp")
                 .forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         User user = (User) request.getSession().getAttribute("user");
+        String adId = request.getParameter("id");
         Ad ad = new Ad(
                 user.getId(),
                 request.getParameter("title"),
                 request.getParameter("description")
         );
-        DaoFactory.getAdsDao().insert(ad);
-        response.sendRedirect("/ads");
+        DaoFactory.getAdsDao().update(ad, adId);
+        response.sendRedirect("/ad_individ?id=" + adId);
     }
 }
-
