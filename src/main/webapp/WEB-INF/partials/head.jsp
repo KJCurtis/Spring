@@ -9,4 +9,56 @@
         border-radius: 5px;
         padding:0!important;
     }
+    *{
+        font-family: 'Raleway', sans-serif;
+        text-align: center;
+        color: honeydew;
+    }
+    body{
+        background-color: #333;
+        margin-bottom: 60px;
+        margin-top: 60px;
+    }
+    input{
+        text-align: left;
+    }
+    textarea{
+        text-align: left;
+    }
+    .register_field{
+        width: 40%;
+        margin: auto;
+    }
+    .ad_div:hover{
+        opacity: 0.7;
+    }
+    .inner{
+        position: relative;
+        top: 50%;
+        transform: translateY(50%);
+    }
+    .form_button_individ{
+        display: inline;
+    }
+    #submit_length_mod_reg{
+        width: 40%;
+        margin: auto;
+    }
+    #submit_length_mod_in{
+        width: 40%;
+        margin: auto;
+    }
+    #sign_up{
+        color: #5bc0de;
+    }
+    #pending_ads{
+        color: #f0ad4e;
+        text-align: center;
+    }
+    #nav_search{
+        float: left;
+        padding-top: 8px;
+        width: 30%;
+        margin-bottom: 0;
+    }
 </style>

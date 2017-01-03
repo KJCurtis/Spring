@@ -28,12 +28,12 @@
             </div>
             <c:choose>
                 <c:when test="${sessionScope.user != null}">
-                    <form action="/ad_individ/ad/update" method="get" class="form_button_individ">
+                    <form action="/ads/update" method="get" class="form_button_individ">
                         <button class="btn btn-lg btn-default" name="id" value=${ad.getId()}>
                             UPDATE
                         </button>
                     </form>
-                    <form action="/ad_individ/ad/remove" method="get" class="form_button_individ">
+                    <form action="/ads/remove" method="get" class="form_button_individ">
                         <button class="btn btn-lg btn-default" name="id" value=${ad.getId()}>
                             REMOVE
                         </button>

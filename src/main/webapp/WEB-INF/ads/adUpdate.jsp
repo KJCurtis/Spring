@@ -10,7 +10,7 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Create a new Ad" />
+        <jsp:param name="title" value="Update existing Ad" />
     </jsp:include>
 </head>
 <body>
@@ -18,9 +18,9 @@
 <jsp:include page="/WEB-INF/partials/footer.jsp" />
 <div class="container">
     <hr>
-    <h1>Create a new Ad</h1>
+    <h1>Update existing Ad</h1>
     <hr>
-<form action="/ads/create" method="post">
+<form action="/ads/update" method="post">
     <c:forEach var="ad" items="${ads}">
         <h2>${ad.title}</h2>
         <h4>${ad.timestamp}</h4>
@@ -34,7 +34,7 @@
             <label for="description">Description</label>
             <textarea id="description" name="description" class="form-control"></textarea>
         </div>
-        <input type="submit" class="btn btn-block btn-primary">
+        <button type="submit" class="btn btn-block btn-primary" name="id" value=${ad.getId()}>Submit</button>
     </c:forEach>
 </form>
 
