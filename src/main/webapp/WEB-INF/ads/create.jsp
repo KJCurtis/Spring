@@ -6,8 +6,11 @@
     </jsp:include>
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
+        <hr>
         <h1>Create a new Ad</h1>
+        <hr>
         <form action="/ads/create" method="post">
             <div class="form-group">
                 <label for="title">Title</label>

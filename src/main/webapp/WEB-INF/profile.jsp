@@ -10,14 +10,16 @@
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
     <div class="container">
+        <hr>
         <h1>Welcome, ${sessionScope.user.username}!</h1>
+        <hr>
 
         <a href="/ads" class="btn btn-lg btn-default">BROWSE ADS</a>
         <a href="/ads/create" class="btn btn-lg btn-default">CREATE AD</a>
 
         <div class="container">
             <c:forEach var="ad" items="${ads}">
-                <div class="col-md-6 ad_div">
+                <div class="col-md-12 ad_div">
                     <form role="search" action="/ad_individ" method="get">
                         <button class="adsBtn" name="id" value=${ad.getId()}>
                             <h2>${ad.title}</h2>
@@ -33,7 +35,7 @@
 
         <div class="container">
             <hr>
-        <h1>Edit Profile</h1>
+        <h1>Profile Information</h1>
         <hr>
         <div class="row">
             <!-- left column -->
