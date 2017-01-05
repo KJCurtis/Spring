@@ -10,33 +10,36 @@
     <jsp:include page="partials/navbar.jsp" />
     <jsp:include page="partials/footer.jsp" />
     <div class="container">
-        <hr>
-        <h1>Create an account</h1>
-        <p><em>Please fill in your information</em></p>
-        <hr>
-        <c:if test="${sessionScope.errorMessage != null}">
-            <div class="has-error alert alert-danger" role="alert">${sessionScope.errorMessage}</div>
-        </c:if>
-        <form action="/register" method="post">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input id="username" name="username" class="form-control register_field" type="text">
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input id="email" name="email" class="form-control register_field" type="text">
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <p><em>Must be at least six characters in length</em></p>
-                <input id="password" name="password" class="form-control register_field" type="password">
-            </div>
-            <div class="form-group">
-                <label for="confirm_password">Confirm Password</label>
-                <input id="confirm_password" name="confirm_password" class="form-control register_field" type="password">
-            </div>
-            <input type="submit" class="btn btn-primary btn-block" id="submit_length_mod_reg">
-        </form>
+        <div class="col-md-12">
+            <hr>
+            <h1>Create an account</h1>
+            <p><em>Please fill in your information</em></p>
+            <hr>
+            <c:if test="${sessionScope.errorMessage != null}">
+                <div class="has-error alert alert-danger" role="alert">${sessionScope.errorMessage}</div>
+            </c:if>
+            <form action="/register" method="post">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input id="username" name="username" class="form-control register_field" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" class="form-control register_field" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <p><em>Must be at least six characters in length</em></p>
+                    <input id="password" name="password" class="form-control register_field" type="password">
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input id="confirm_password" name="confirm_password" class="form-control register_field" type="password">
+                </div>
+                <input type="submit" class="btn btn-primary btn-block submit_length_mod_reg" id="submit_length_mod_reg" value="Register">
+                <a href="/login" class="btn btn-primary btn-block submit_length_mod_reg">Login</a>
+            </form>
+        </div>
     </div>
 </body>
 </html>

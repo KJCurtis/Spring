@@ -40,11 +40,11 @@
     .form_button_individ{
         display: inline;
     }
-    #submit_length_mod_reg{
+    .submit_length_mod_reg{
         width: 40%;
         margin: auto;
     }
-    #submit_length_mod_in{
+    .submit_length_mod_in{
         width: 40%;
         margin: auto;
     }
